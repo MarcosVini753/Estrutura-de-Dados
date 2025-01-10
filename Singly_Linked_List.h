@@ -23,6 +23,7 @@ void SLL_free(SLL *list);
 Node *SLL_last_node(SLL *list);
 Node *find_node(SLL *list, int value);
 void SLL_remove_node(SLL *list, Node *node);
+
 #endif
 
 #ifndef Singly_Linked_List_implementation
@@ -71,9 +72,6 @@ void SLL_remove_node(SLL *list, Node *node){
     else{
         while(aux->next != node) aux = aux->next;
         aux->next = node->next; free(node);
-    }
-    list->size--;
-
+    } list->size--;
 }
-
 #endif
